@@ -28,5 +28,11 @@ export class ListaEmpleadosComponent implements OnInit {
       console.log(this.empleados);
     });
   }
-
+  eliminar(id:string){
+    this._empleadoService.eliminar(id).then(()=> {
+      console.log("Se elimino correctamente!");
+    }).catch(error =>{
+      console.log(error);
+    })  
+  }
 }

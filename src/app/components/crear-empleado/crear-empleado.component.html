@@ -4,7 +4,7 @@
             <div class="card card-center">
                 <div class="card-body">
                     <h3>
-                        CREAR EMPLEADO
+                        {{titulo}}
                     </h3>
                     <!-- <span *ngIf="submitted && crearEmpleado.invalid">
                         TODOS LOS CAMPOS SON OBLIGATORIOS
@@ -12,7 +12,7 @@
                     <div *ngIf="submitted && crearEmpleado.invalid" class="alert alert-danger" role="alert">
                         TODOS LOS CAMPOS SON OBLIGATORIOS
                     </div>
-                    <form class="mt-4" [formGroup]="crearEmpleado" (ngSubmit)="agregarEmpleado()">
+                    <form class="mt-4" [formGroup]="crearEmpleado" (ngSubmit)="botonEmpleado()">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="form-control form-control-lg" placeholder="Nombre" formControlName = "nombre">
