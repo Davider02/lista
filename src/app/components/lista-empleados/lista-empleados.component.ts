@@ -8,8 +8,13 @@ import { EmpleadoService } from 'src/app/services/empleado.service';
 })
 export class ListaEmpleadosComponent implements OnInit {
   empleados: any[] = [];
+imagen: any;
+imagen2: string; 
+
 
   constructor(private _empleadoService: EmpleadoService) {
+    this.imagen2="https://www.vecinosdelacosta.com/wp-content/uploads/2021/11/team.jpg"
+
   }
 
   ngOnInit(): void {

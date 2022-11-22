@@ -14,13 +14,17 @@ export class CrearEmpleadoComponent implements OnInit {
   submitted = false;
   id: string | null;
   titulo = 'CREAR EMPLEADO';
+  imagen: string; 
+  
 
   constructor(private fb: FormBuilder, private _empleadoService: EmpleadoService, private router:Router, private aRoute: ActivatedRoute) {
+    this.imagen="https://www.vecinosdelacosta.com/wp-content/uploads/2021/11/team.jpg"
       this.crearEmpleado = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       dni: ['', Validators.required],
       salario: ['', Validators.required],
+      
     })
     this.id = this.aRoute.snapshot.paramMap.get('id');
    }
